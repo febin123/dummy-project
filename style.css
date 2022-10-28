@@ -88,7 +88,6 @@ nav form button{
     color: #fff;
     font-size: 17px;
     background: none;
-
     border: none;
     border-radius: 2px;
     border-top-right-radius: 12px;
@@ -96,7 +95,7 @@ nav form button{
     cursor: pointer;
     transition: .2s all;
 }
-@media (max-width: 800px) {
+@media (max-width: 1140px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -127,22 +126,38 @@ nav form button{
     .navbar-links.active {
         display: flex;
     }
+   
+    nav form.active{
+        top: 95px;
+        opacity: 1;
+        pointer-events: auto;
+        
+    }
+    nav form::before{
+        position: absolute;
+        content: "";
+        top: 2px;
+        right: 0;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-bottom-color: #333;
+        margin: 10px 10px 0;
+        padding: .5rem 1rem;
+
+    }
+    nav form::after{
+        position: absolute;
+        content: "";
+        height: 60px;
+        padding: 2px;
+        color: red;
+        border-radius: 2px;
+        min-width: calc(100% +20px);
+        z-index: -2;
+        left: 50%;
+        top: 50%;
+        transform: translate(30%,30%);
+
+    }
 }
-/*start of bacground image*/
-/* .section-top{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    background-image: url(Image/Acer_Wallpaper_01_5000x2814.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    justify-content: center;
-}
-.content{
-    position: absolute;
-    top: 50%;
-} */
-/*end of background image*/
