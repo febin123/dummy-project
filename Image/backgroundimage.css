@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+* {
+    font-family: Raleway;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* text-align: center; */
+   background-image: url("https://img9.hkrtcdn.com/21102/bnr_2110148_o.jpg");
+    justify-content: center;
+    animation: change 20s infinite ease-in-out;
+}
+@keyframes change{
+    0%{
+        background-image: url("https://img9.hkrtcdn.com/21102/bnr_2110148_o.jpg");
+    }
+    25%{
+        background-image: url("/Image/Acer_Wallpaper_01_5000x2814.jpg");
+    }
+    50%{
+        background-image: url("/Image/Acer_Wallpaper_02_5000x2813.jpg");
+    }
+    75%{
+        background-image: url("/Image/Acer_Wallpaper_03_5000x2814.jpg");
+    }
+    100%{
+        background-image: url("https://img9.hkrtcdn.com/21102/bnr_2110148_o.jpg");
+    }
+}
