@@ -63,38 +63,56 @@ body {
     background-color: white;
     border-radius: 10px;
 }
-nav form{
-    display: flex;
-    height: 40px;
-    padding: 2px;
-    min-width: 18%!important;
-    border-radius: 2px;
-    /* border: 1px solid rgba(155, 155, 155, 0.2); */
-    border-radius: 36px;
-}
 
-nav form .search-data{
-    width: 100%;
+nav ul .search-icon{
+    height: 40px;
+    width: 240px;
+    display: flex;
+    background: #f2f2f2;
+    border-radius: 5px;
+  }
+  nav ul .search-icon input{
     height: 100%;
-    padding: 0px 10px;
-    color: #fff;
-    font-size: 17px;
+    width: 200px;
     border: none;
-    font-weight: 500;
-    background: none;
-}
-nav form button{
-    padding: 0 15px;
-    color: #fff;
-    font-size: 17px;
-    background: none;
-    border: none;
-    border-radius: 2px;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
+    outline: none;
+    padding: 0 10px;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+  }
+  nav ul .search-icon .icon{
+    height: 100%;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
-    transition: .2s all;
-}
+  }
+  nav ul .search-icon .icon:hover{
+    background: #e6e6e6;
+  }
+  nav ul .search-icon .icon span{
+    color: #222222;
+    font-size: 18px;
+  }
+  nav ul li.btn{
+    font-size: 29px;
+    flex: 1;
+    padding: 0 40px;
+    display: none;
+  }
+  nav ul li.btn span{
+    height: 42px;
+    width: 42px;
+    text-align: center;
+    line-height: 42px;
+    border: 1px solid #151515;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
 @media (max-width: 1140px) {
     .navbar {
         flex-direction: column;
@@ -126,38 +144,5 @@ nav form button{
     .navbar-links.active {
         display: flex;
     }
-   
-    nav form.active{
-        top: 95px;
-        opacity: 1;
-        pointer-events: auto;
-        
-    }
-    nav form::before{
-        position: absolute;
-        content: "";
-        top: 2px;
-        right: 0;
-        width: 0;
-        height: 0;
-        border: 10px solid transparent;
-        border-bottom-color: #333;
-        margin: 10px 10px 0;
-        padding: .5rem 1rem;
-
-    }
-    nav form::after{
-        position: absolute;
-        content: "";
-        height: 60px;
-        padding: 2px;
-        color: red;
-        border-radius: 2px;
-        min-width: calc(100% +20px);
-        z-index: -2;
-        left: 50%;
-        top: 50%;
-        transform: translate(30%,30%);
-
-    }
+    
 }
